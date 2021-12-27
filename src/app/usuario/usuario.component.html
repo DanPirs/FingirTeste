@@ -1,0 +1,64 @@
+<div class="container-fluid">
+
+  <div class="row bg-secondary">
+      <div class="col-md-12 text-white">
+
+          <a routerLink='/inicio' class="text-white text-left">
+              <i class="fa fa-angle-double-left" aria-hidden="true"></i> início
+          </a>
+
+          <h1 class="fs-54 text-center">Usuarios</h1>
+          <h5 class="fs-18 text-center">Veja aqui todos os usuarios cadastrados:</h5>
+
+          <div class="row d-flex justify-content-center mt-4 mb-5">
+              <div class="col-md-3">
+
+
+              </div>
+          </div>
+
+      </div>
+  </div>
+
+</div>
+
+
+<div class="container">
+  <div class="row mt-5">
+      <div class="col-md-12">
+          <h2 class="text-center">Todos os temas</h2>
+      </div>
+  </div>
+
+  <div class="row mt-6 mb-8 d-flex justify-content-center">
+      <div class="col-md-9">
+
+          <table class="table table-hover">
+
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nome</th>
+                  <th scope="col" class="text-right">Email</th>
+                  <th scope="col" class="text-right">Contato</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr *ngFor='let item of listaUsuario'>
+                  <th>{{item.id}}</th>
+                  <td>{{item.nome}}</td>
+                  <td>{{item.email}}</td>
+                  <td>{{item.contato}}</td>
+                  <td class="d-flex justify-content-end">
+                    <button class="btn btn-info mr-3" [routerLink]="['/edita-usuario', item.id]" >Editar</button>
+                  </td>
+                </tr>
+              </tbody>>
+
+            </table>
+
+      </div>
+  </div>
+
+</div>
